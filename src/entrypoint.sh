@@ -30,6 +30,7 @@ export PACKAGE_MANAGER=$INPUT_PACKAGE_MANAGER
 
 export UPDATE_PR=$INPUT_UPDATE_PR
 
+pushd /dependabot-script
 if [[ -z "$UPDATE_PR" ]]; then
   bundle exec ruby ./create_or_update_prs.rb
 else
