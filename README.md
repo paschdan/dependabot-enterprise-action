@@ -33,13 +33,14 @@ It cannot act on Messages like `@dependabot rebase` or `@dependabot merge`
 Package and push all charts in `./charts` dir to `gh-pages` branch:
 
 ```yaml
-name: release
+name: dependabot
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '0 23 * * *' 
 
 jobs:
-  release:
+  dependabot:
     runs-on: [ self-hosted] 
     steps:
       - name: Create or Update Dependabot Pull Requests
@@ -53,13 +54,14 @@ jobs:
 The same example but with cached docker image:
 
 ```yaml
-name: release
+name: dependabot
 on:
+  workflow_dispatch:
   schedule:
     - cron:  '0 23 * * *'
 
 jobs:
-  release:
+  dependabot:
     runs-on: [ self-hosted]
     steps:
       - name: Create or Update Dependabot Pull Requests
