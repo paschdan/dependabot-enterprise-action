@@ -1,4 +1,4 @@
-# Helm Publisher
+# Dependabot Enterprise Action
 
 A GitHub Action for running dependabot in Github Enterpise
 
